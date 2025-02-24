@@ -1,0 +1,27 @@
+{
+	"common": {
+		"title": "ACME Institute - fikcyjna instytucja edukacyjna",
+		"logoAlt": "ACME Institute logo",
+		"iconStarAlt": "Ikona gwiazdki",
+		"addToFavorites": "dodaj do ulubionych",
+		"removeFromFavorites": "usuń z ulubionych",
+		"category": {
+			"knowledge": "wiedza",
+			"inspirations": "inspiracje",
+			"interpretations": "interpretacje",
+			"availables": "dostępne"
+		},
+		"categoryIconAlt": "Ikona kategorii - {category}",
+		"seeMore": "zobacz więcej",
+		"iconSeeMoreAlt": "ikona strzałki w prawo",
+		"footerContent": "Blog edukacyjny. Wszelkie prawa zastrzeżone."
+	},
+	"iconGoBackAlt": "Ikona strzałki w lewo - powrót",
+	"home": {
+		"label": "Blog",
+		"header": "Blog Edukacyjny",
+		"categories": "Kategorie",
+		"posts": "Wpisy",
+		"iconGoBackAlt": "Ikona strzałki w lewo - powrót"
+	}
+}

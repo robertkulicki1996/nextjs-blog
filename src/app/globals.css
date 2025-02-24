@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --blue: #444E8D;
+  --yellow: #FFBF42;
+  --red: #D94F4F;
+  --green: #82E49A;
+  --dark-blue: #363B5C;
+  --dark-red: #A02E41;
+  --plain-blue: #1E2C3B;
+  --gray: #DDDDDD;
+  --light-gray: #F4F4F4;
+  --dark-gray: #3F3A54;
+  --darken-gray: #414042;
+  --d-blue: #2F3A6F; /* Darken colors */
+  --d-yellow: #E69E35;
+  --d-red: #A02E41;
+  --d-green: #5DAF71;
+}
+
+/* TODO: DARK MODE */
+/* @media (prefers-color-scheme: dark) {
+  --white: #FFFFFF;
+  --black: #000000;
+  --blue: #444E8D;
+  --yellow: #FFBF42;
+  --red: #D94F4F;
+  --green: #82E49A;
+  --dark-blue: #363B5C;
+  --dark-red: #A02E41;
+  --plain-blue: #1E2C3B;
+  --gray: #DDDDDD;
+  --light-gray: #F4F4F4;
+  --dark-gray: #3F3A54;
+  --darken-gray: #414042;
+} */
+
+*, body {
+  margin: 0;
+  padding: 0;
+}
+
+.underline-thick {
+  text-decoration: underline;
+  text-decoration-thickness: 20%;
+  text-underline-offset: 25%;
+}
+
+.swiper-pagination-bullet {
+  background: inherit;
+  border: 1px solid var(--dark-gray);
+  width: 16px;
+  height: 16px;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
+}
+
+.loader {
+  border: 8px solid var(--light-gray);
+  border-top: 8px solid var(--plain-blue);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
