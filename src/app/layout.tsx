@@ -18,17 +18,12 @@ export function generateStaticParams() {
 
 export default async function RootLayout({
   children,
-  params
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ slug: string }>;
 }>) {
   const locale = await getLocale();
   const messages = await getMessages();
 
-  const slug = (await params)?.slug;
-
-  // TODO: DIFFERENT NAVBAR HEADER FOR HOME AND POST DETAILS PAGE
   return (
     <html lang={locale}>
       <body
@@ -37,7 +32,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <header>
             <ResponsiveContainer>
-              <Navbar slug={slug} />
+              <Navbar />
             </ResponsiveContainer>
           </header>
           <main>{children}</main>

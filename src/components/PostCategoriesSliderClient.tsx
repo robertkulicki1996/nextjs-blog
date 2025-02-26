@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, FreeMode } from "swiper/modules";
+import { Navigation, Pagination, FreeMode } from "swiper/modules";
 import { PostCategories, PostCategoriesRecord } from "@/types";
 
 import "swiper/css";

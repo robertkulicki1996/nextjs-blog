@@ -7,7 +7,7 @@ interface HeaderProps {
   textKey: string;
   goBack?: boolean;
   href?: Url;
-  as?: "h2" | "h3";
+  as?: "h1" | "h2" | "h3";
   className?: string;
 }
 
@@ -22,9 +22,9 @@ export default function Header({
   const HeadingTag = as;
 
   return href ? (
-    <Link href={href} className="flex items-center gap-2">
+    <Link href={href} className="flex items-center gap-2 group">
       {goBack && (
-        <SvgIcon src="/icons/arrow-left.svg" alt={t("iconGoBackAlt")} />
+        <SvgIcon src="/icons/arrow-left.svg" className="w-5 transition-transform duration-300 group-hover:translate-x-[-8px]" alt={t("iconGoBackAlt")} />
       )}
       <h1 className="font-open-sans text-[32px] font-bold text-dark-blue hover:cursor-pointer">
         {t(textKey)}
@@ -35,7 +35,7 @@ export default function Header({
       className={`font-open-sans text-2xl font-bold text-dark-blue flex items-center gap-2 mb-[50px] ${className}`}
     >
       {goBack && (
-        <SvgIcon src="/icons/arrow-left.svg" alt={t("iconGoBackAlt")} />
+        <SvgIcon src="/icons/arrow-left.svg" className="w-5 transition-transform duration-300 group-hover:translate-x-[-8px]" alt={t("iconGoBackAlt")} />
       )}
       {t(textKey)}
     </HeadingTag>

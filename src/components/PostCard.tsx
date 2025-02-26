@@ -31,7 +31,6 @@ export default function PostCard({
         {t(`category.${category}`).toUpperCase()}
       </div>
 
-
       <div className="flex flex-col justify-between items-start w-full gap-4 mb-auto">
         <h4 className="font-playfair-display text-2xl h-[136px] font-black text-plain-blue">
           {title}

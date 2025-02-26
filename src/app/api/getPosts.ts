@@ -7,10 +7,10 @@ export async function getPosts(): Promise<Post[]> {
   const postsData = await res.json();
 
   if (!res.ok) {
-    throw new Error("Failed to fetch posts");
+    throw new Error("Failed to fetch all posts");
   }
 
-  return postsData.map((post: any) => ({
+  return postsData.map((post: Post) => ({
     id: post.id,
     title: post.title,
     body: post.body,

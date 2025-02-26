@@ -1,4 +1,4 @@
-import { getPosts } from "@/api/getPosts";
+import { getPosts } from "@/app/api/getPosts";
 import {
   Header,
   PostCard,
@@ -6,12 +6,17 @@ import {
   ResponsiveContainer,
 } from "@/components";
 import GridContainer from "@/components/GridContainer";
+import { notFound } from "next/navigation";
 
-export default async function Home() {
+export default async function Page() {
   const posts = await getPosts();
+  if (!posts) notFound();
 
   return (
     <>
+      <ResponsiveContainer topPadding={false}>
+        <Header textKey="home.header" />
+      </ResponsiveContainer>
       <ResponsiveContainer
         topPadding={false}
         className="bg-light-gray pt-[54px] pb-[122px] mb-6"

@@ -4,10 +4,12 @@ import { getRandomPostCategory } from "@/utils/getRandomPostCategory";
 
 export async function getPost(postId: number): Promise<Post> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/${postId}`);
+  const postData = await res.json();
+
   if (!res.ok) {
     throw new Error(`Failed to fetch post with id: ${postId}`);
   }
-  const { id, title, body } = await res.json();
+  const { id, title, body } = postData;
 
   return {
     id,
